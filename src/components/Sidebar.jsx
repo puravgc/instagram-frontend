@@ -23,7 +23,7 @@ const Sidebar = ({login}) => {
   };
   return (
     <div className=" pl-5">
-      <div className="w-[50%] block md:hidden">
+      <div className="w-[50%] block md:hidden ">
         <ul className="flex flex-col justify-between">
           {isLoggedIn ? (
             <>

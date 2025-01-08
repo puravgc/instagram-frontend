@@ -71,18 +71,19 @@ const Profile = () => {
           <hr class=" w-[600px] h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700 flex justify-center" />
         </div>
 
-        <div className="flex flex-wrap justify-start ml-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
           {pic.map((e, id) => {
             return (
               <div
                 key={id}
-                className="w-[150px] md:w-[200px] h-[200px] bg-gray-100 dark:bg-gray-700 m-5 overflow-hidden flex justify-center cursor-pointer"
+                className="overflow-hidden rounded-lg shadow-lg"
               >
                 <img
                   src={e.pic}
                   onClick={() => {
                     toggleDetails(e);
                   }}
+                  className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-72"
                 />
               </div>
             );

@@ -78,8 +78,8 @@ const UserProfile = () => {
   return (
     <div className="w-screen flex justify-center">
       <div className="flex justify-center items-center flex-col border max-w-[80%]">
-        <div className="lg:flex justify-evenly gap-20 max-w-[700px]">
-          <div className="profile-pic">
+        <div className="pl-5 lg:flex justify-evenly gap-20 max-w-[700px] ">
+          <div className=" ">
             <img
               src={Userdata.Photo ? Userdata.Photo : defaultProfilePicture}
               alt=""
@@ -120,14 +120,14 @@ const UserProfile = () => {
         <div className="w-full flex items-center justify-center">
           <hr class=" w-[600px] h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700 flex justify-center" />
         </div>
-        <div className="flex flex-wrap justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center pl-20 pr-20">
           {posts.map((e, id) => {
             return (
               <div
                 key={id}
-                className="w-[200px] h-[200px] bg-gray-100 dark:bg-gray-700 m-5 object-contain overflow-hidden"
+                className="overflow-hidden rounded-lg shadow-lg"
               >
-                <img src={e.pic} />
+                <img src={e.pic} className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-72"/>
               </div>
             );
           })}

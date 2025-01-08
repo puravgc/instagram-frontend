@@ -23,8 +23,8 @@ const Navbar = ({ login }) => {
   };
 
   return (
-    <div className=" ">
-      <div className="hidden pt-7 fixed pl-11 gap-16 md:block">
+    <div className="">
+      <div className="hidden pt-7 fixed pl-11 gap-16 lg:block ">
         <img
           className="h-[40px] cursor-pointer"
           src={instagram_logo}
@@ -39,39 +39,39 @@ const Navbar = ({ login }) => {
               <>
                 <Link to={"/"} className="flex items-center">
                   <span class="material-symbols-outlined">home</span>
-                  <li className=" text-l font-bold cursor-pointer p-5 hidden md:block">
+                  <li className=" text-l font-bold cursor-pointer p-5 hidden lg:block">
                     Home
                   </li>
                 </Link>
                 <Link to={"/myfollowing"} className="flex items-center">
                   <span class="material-symbols-outlined">heart_check</span>
-                  <li className="text-l font-bold cursor-pointer p-5 hidden md:block">
+                  <li className="text-l font-bold cursor-pointer p-5 hidden lg:block">
                     My Following
                   </li>
                 </Link>
                 <Link to={"/search"} className="flex items-center">
                   <span class="material-symbols-outlined">search</span>
-                  <li className="text-l font-bold cursor-pointer p-5 hidden md:block">
+                  <li className="text-l font-bold cursor-pointer p-5 hidden lg:block">
                     Search
                   </li>
                 </Link>
                 <Link to={"/profile"} className="flex items-center">
                   <span class="material-symbols-outlined">account_circle</span>
-                  <li className="text-l font-bold cursor-pointer p-5 hidden md:block">
+                  <li className="text-l font-bold cursor-pointer p-5 hidden lg:block">
                     Profile
                   </li>
                 </Link>
 
                 <Link to={"/createpost"} className="flex items-center">
                   <span class="material-symbols-outlined">add_circle</span>
-                  <li className="text-l font-bold cursor-pointer p-5 hidden md:block">
+                  <li className="text-l font-bold cursor-pointer p-5 hidden lg:block">
                     Create Post
                   </li>
                 </Link>
                 <Link to={"/"} className="flex items-center">
                   <span class="material-symbols-outlined">logout</span>
                   <li
-                    className="text-l font-bold cursor-pointer p-5 hidden md:block"
+                    className="text-l font-bold cursor-pointer p-5 hidden lg:block"
                     onClick={() => Signout()}
                   >
                     Sign Out
@@ -79,28 +79,15 @@ const Navbar = ({ login }) => {
                 </Link>
               </>
             ) : (
-              <>
-                <Link to={"/signup"} className="flex items-center">
-                  <span class="material-symbols-outlined">input</span>
-                  <li className="text-l font-bold cursor-pointer p-5 hidden md:block">
-                    Sign Up
-                  </li>
-                </Link>
-                <Link to={"/signin"} className="flex items-center">
-                  <span class="material-symbols-outlined">login</span>
-                  <li className="text-l font-bold cursor-pointer p-5 hidden md:block">
-                    Sign In
-                  </li>
-                </Link>
-              </>
+              <div className="flex"></div>
             )}
           </ul>
         </div>
       </div>
-      <div className="block fixed bottom-0 left-0 w-full bg-white md:hidden">
-        <div className="pt-2 pl-11 flex justify-center md:flex-row md:items-center md:h-auto">
+      <div className="block fixed bottom-0 left-0 w-full bg-white lg:hidden">
+        <div className="pt-2 pl-11 flex justify-center lg:flex-row lg:items-center lg:h-auto">
           <div className="w-[100%]">
-            <ul className="flex md:flex justify-evenly items-center md:space-x-5 pr-6">
+            <ul className="flex lg:flex justify-evenly items-center lg:space-x-5 pr-6">
               {isLoggedIn ? (
                 <>
                   <Link to={"/"} className="flex items-center">
